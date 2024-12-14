@@ -1,0 +1,36 @@
+/* Konteynerning markazga joylashuvi va kengligi */
+.container {
+    max-width: 1200px; /* Umumiy kenglik, kerakli qiymatga o'zgartirishingiz mumkin */
+    margin: auto; /* Markazlash */
+}
+
+/* Har bir qator uchun 3 ustunli grid */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Har qator uchun 3 ustun */
+    gap: 20px; /* Rasmlar orasidagi masofa */
+}
+
+/* Rasm va matnlar uchun umumiy o'lchamlar */
+.container img {
+    width: 500px; /* Rasm konteynerni to'liq egallaydi */
+    height: 250px;
+    border-radius: 5px; /* Rasm burchaklari yumaloqlanishi */
+}
+    
+/* Har bir qator tavsifi */
+.container h2 {
+    grid-column: span 3; /* Matn to'liq qatorni egallaydi */
+    text-align: center;
+    font-size: 1.5em;
+    margin: 20px 0; /* Yuqori va pastki masofa */
+}
+
+/* Har bir qator tavsifi uchun paragraf uslubi */
+.container p {
+    grid-column: span 3; /* Matn qatorning to'liq kengligini egallaydi */
+    text-align: center;
+    font-size: 1em;
+    color: #666; /* Matn rangi */
+    margin: 0 0 20px 0; /* Matn va keyingi qator orasidagi masofa */
+}
